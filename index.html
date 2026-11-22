@@ -1,45 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S-ROSE Smart Attendance Scanner</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">
+    ☰
+</button>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <div class="brand">
-        <img src="assets/images/s-rose-school-logo.jpg" alt="S-ROSE School Logo" class="school-logo">
+        <img src="assets/images/s-rose-school-logo.jpg" alt="S-ROSE School Logo" class="school-logo" />
         <div><strong>S-ROSE</strong><small>Smart Attendance</small></div>
       </div>
       <div class="school-motto">The Lord is Our Shepherd</div>
       <nav id="mainNav">
-        <button class="nav-link active" data-view="dashboard">▦ <span>Dashboard</span></button>
-        <button class="nav-link" data-view="teachers">♙ <span>Teacher Management</span></button>
-        <button class="nav-link" data-view="scan">▧ <span>Register Scanning</span></button>
-        <button class="nav-link" data-view="review">✓ <span>Review & Verification</span></button>
-        <button class="nav-link" data-view="records">▤ <span>Attendance Records</span></button>
-        <button class="nav-link" data-view="individual">♧ <span>Individual Reports</span></button>
-        <button class="nav-link" data-view="schoolreport">▥ <span>School Reports</span></button>
-        <button class="nav-link" data-view="absence">＋ <span>Absence & Leave</span></button>
-        <button class="nav-link" data-view="calculator">％ <span>Attendance Calculator</span></button>
-        <button class="nav-link" data-view="calendar">▦ <span>School Calendar</span></button>
-        <button class="nav-link" data-view="settings">⚙ <span>Settings & Backup</span></button>
+        <button class="nav-link active" data-view="dashboard">
+          ▦ <span>Dashboard</span>
+        </button>
+        <button class="nav-link" data-view="teachers">
+          ♙ <span>Teacher Management</span>
+        </button>
+        <button class="nav-link" data-view="scan">
+          ▧ <span>Register Scanning</span>
+        </button>
+        <button class="nav-link" data-view="review">
+          ✓ <span>Review & Verification</span>
+        </button>
+        <button class="nav-link" data-view="records">
+          ▤ <span>Attendance Records</span>
+        </button>
+        <button class="nav-link" data-view="individual">
+          ♧ <span>Individual Reports</span>
+        </button>
+        <button class="nav-link" data-view="schoolreport">
+          ▥ <span>School Reports</span>
+        </button>
+        <button class="nav-link" data-view="absence">
+          ＋ <span>Absence & Leave</span>
+        </button>
+        <button class="nav-link" data-view="calculator">
+          ％ <span>Attendance Calculator</span>
+        </button>
+        <button class="nav-link" data-view="calendar">
+          ▦ <span>School Calendar</span>
+        </button>
+        <button class="nav-link" data-view="settings">
+          ⚙ <span>Settings & Backup</span>
+        </button>
       </nav>
       <div class="sidebar-footer">S-ROSE • Academic Records</div>
     </aside>
 
     <main class="main-area">
       <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
         <div>
           <h1 id="pageTitle">Dashboard</h1>
           <p id="pageSubtitle">School attendance overview</p>
         </div>
-        <div class="topbar-right"><span class="status-dot"></span><span>Local system</span></div>
+        <div class="topbar-right">
+          <span class="status-dot"></span><span>Local system</span>
+        </div>
       </header>
 
       <section class="view active" id="view-dashboard">
@@ -47,19 +76,26 @@
           <div>
             <p class="eyebrow">SELULA ROYAL SCHOOL OF EXCELLENCE</p>
             <h2>Smart Attendance Scanner</h2>
-            <p>Manage teacher attendance, verify register entries and prepare reports.</p>
+            <p>
+              Manage teacher attendance, verify register entries and prepare
+              reports.
+            </p>
           </div>
           <div class="welcome-badge">S-ROSE</div>
         </div>
         <div class="stats-grid">
-          <article class="stat-card"><span>Active Teachers</span><strong id="dashTeachers">0</strong><small>Registered
-              staff</small></article>
-          <article class="stat-card"><span>Today's Records</span><strong id="dashToday">0</strong><small>Verified
-              attendance</small></article>
-          <article class="stat-card"><span>Late Arrivals Today</span><strong id="dashLate">0</strong><small>After 7:20
-              AM</small></article>
-          <article class="stat-card"><span>Pending Reviews</span><strong id="dashPending">0</strong><small>Scanned
-              register pages</small></article>
+          <article class="stat-card">
+            <span>Active Teachers</span><strong id="dashTeachers">0</strong><small>Registered staff</small>
+          </article>
+          <article class="stat-card">
+            <span>Today's Records</span><strong id="dashToday">0</strong><small>Verified attendance</small>
+          </article>
+          <article class="stat-card">
+            <span>Late Arrivals Today</span><strong id="dashLate">0</strong><small>After 7:20 AM</small>
+          </article>
+          <article class="stat-card">
+            <span>Pending Reviews</span><strong id="dashPending">0</strong><small>Scanned register pages</small>
+          </article>
         </div>
         <div class="content-grid">
           <div class="panel">
@@ -70,10 +106,18 @@
               </div>
             </div>
             <div class="quick-grid">
-              <button class="quick-action" data-go="teachers"><b>＋</b><span>Add a teacher</span></button>
-              <button class="quick-action" data-go="scan"><b>▧</b><span>Upload register pages</span></button>
-              <button class="quick-action" data-go="review"><b>✓</b><span>Verify attendance</span></button>
-              <button class="quick-action" data-go="calculator"><b>％</b><span>Calculate attendance</span></button>
+              <button class="quick-action" data-go="teachers">
+                <b>＋</b><span>Add a teacher</span>
+              </button>
+              <button class="quick-action" data-go="scan">
+                <b>▧</b><span>Upload register pages</span>
+              </button>
+              <button class="quick-action" data-go="review">
+                <b>✓</b><span>Verify attendance</span>
+              </button>
+              <button class="quick-action" data-go="calculator">
+                <b>％</b><span>Calculate attendance</span>
+              </button>
             </div>
           </div>
           <div class="panel">
@@ -85,8 +129,12 @@
             </div>
             <ul class="note-list">
               <li>Late arrival is after <strong>7:20 AM</strong>.</li>
-              <li>Scanned handwriting must be checked by a person before saving.</li>
-              <li>Records are stored in this browser. Export backups regularly.</li>
+              <li>
+                Scanned handwriting must be checked by a person before saving.
+              </li>
+              <li>
+                Records are stored in this browser. Export backups regularly.
+              </li>
             </ul>
           </div>
         </div>
@@ -95,7 +143,8 @@
             <div>
               <h3>Recent Attendance</h3>
               <p>Latest verified entries</p>
-            </div><button class="btn btn-light" data-go="records">View all</button>
+            </div>
+            <button class="btn btn-light" data-go="records">View all</button>
           </div>
           <div class="table-wrap">
             <table>
@@ -123,17 +172,21 @@
         </div>
         <div class="panel">
           <form id="teacherForm" class="form-grid">
-            <input type="hidden" id="teacherId">
-            <label>Teacher's full name<input id="teacherName" required placeholder="Enter full name"></label>
-            <label>Position / Role<input id="teacherPosition" placeholder="e.g. Class Teacher"></label>
-            <label>Class / Department<input id="teacherClass" placeholder="e.g. Basic 6"></label>
-            <label>Telephone<input id="teacherPhone" type="tel" placeholder="Optional"></label>
+            <input type="hidden" id="teacherId" />
+            <label>Teacher's full name<input id="teacherName" required placeholder="Enter full name" /></label>
+            <label>Position / Role<input id="teacherPosition" placeholder="e.g. Class Teacher" /></label>
+            <label>Class / Department<input id="teacherClass" placeholder="e.g. Basic 6" /></label>
+            <label>Telephone<input id="teacherPhone" type="tel" placeholder="Optional" /></label>
             <label>Status<select id="teacherStatus">
                 <option>Active</option>
                 <option>Inactive</option>
               </select></label>
-            <div class="form-actions"><button class="btn btn-primary" type="submit" id="teacherSubmit">Save
-                Teacher</button><button class="btn btn-light" type="reset" id="teacherCancel">Clear</button></div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" id="teacherSubmit">
+                Save Teacher</button><button class="btn btn-light" type="reset" id="teacherCancel">
+                Clear
+              </button>
+            </div>
           </form>
         </div>
         <div class="panel">
@@ -141,7 +194,8 @@
             <div>
               <h3>Registered Teachers</h3>
               <p id="teacherCount">0 teachers</p>
-            </div><input class="search-input" id="teacherSearch" placeholder="Search teachers...">
+            </div>
+            <input class="search-input" id="teacherSearch" placeholder="Search teachers..." />
           </div>
           <div class="table-wrap">
             <table>
@@ -168,16 +222,23 @@
             <p>Upload photos of handwritten attendance register pages.</p>
           </div>
         </div>
-        <div class="notice"><strong>Important:</strong> Uploading a photo does not automatically identify handwriting.
-          The page must be reviewed and attendance details entered manually before they become official records.</div>
+        <div class="notice">
+          <strong>Important:</strong> Uploading a photo does not automatically
+          identify handwriting. The page must be reviewed and attendance
+          details entered manually before they become official records.
+        </div>
         <div class="panel">
           <form id="scanForm" class="form-grid">
-            <label>Register date<input type="date" id="scanDate" required></label>
-            <label>Batch description<input id="scanDescription" placeholder="e.g. Staff register – Monday"></label>
+            <label>Register date<input type="date" id="scanDate" required /></label>
+            <label>Batch description<input id="scanDescription" placeholder="e.g. Staff register – Monday" /></label>
             <label class="full-width">Select register page images<input type="file" id="scanFiles" accept="image/*"
-                multiple required></label>
+                multiple required /></label>
             <div id="scanPreview" class="preview-grid full-width"></div>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Scanned Pages</button></div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">
+                Save Scanned Pages
+              </button>
+            </div>
           </form>
         </div>
         <div class="panel">
@@ -195,7 +256,10 @@
         <div class="section-intro">
           <div>
             <h2>Review & Verification</h2>
-            <p>Use the scanned register as a reference and enter verified details.</p>
+            <p>
+              Use the scanned register as a reference and enter verified
+              details.
+            </p>
           </div>
         </div>
         <div class="panel">
@@ -204,7 +268,8 @@
               <h3>Choose a scan batch</h3>
               <p>Open a batch to view its pages</p>
             </div>
-          </div><select id="reviewBatch" class="select-wide">
+          </div>
+          <select id="reviewBatch" class="select-wide">
             <option value="">Select a scan batch</option>
           </select>
           <div id="reviewImages" class="review-images"></div>
@@ -217,18 +282,22 @@
             </div>
           </div>
           <form id="reviewForm" class="form-grid">
-            <label>Attendance date<input type="date" id="reviewDate" required></label>
+            <label>Attendance date<input type="date" id="reviewDate" required /></label>
             <label>Teacher<select id="reviewTeacher" required>
                 <option value="">Select teacher</option>
               </select></label>
-            <label>Arrival time<input type="time" id="reviewArrival" required></label>
-            <label>Number of times signed<input type="number" id="reviewTimes" min="1" value="1" required></label>
-            <label>Departure time<input type="time" id="reviewDeparture" required></label>
-            <label class="check-label"><input type="checkbox" id="reviewSignature" checked> Teacher's signature is
-              present</label>
+            <label>Arrival time<input type="time" id="reviewArrival" required /></label>
+            <label>Number of times signed<input type="number" id="reviewTimes" min="1" value="1" required /></label>
+            <label>Departure time<input type="time" id="reviewDeparture" required /></label>
+            <label class="check-label"><input type="checkbox" id="reviewSignature" checked />
+              Teacher's signature is present</label>
             <label class="full-width">Verification notes<textarea id="reviewNotes" rows="2"
-                placeholder="Optional note about the register entry"></textarea></label>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Verified Attendance</button>
+                placeholder="Optional note about the register entry"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">
+                Save Verified Attendance
+              </button>
             </div>
           </form>
         </div>
@@ -238,19 +307,30 @@
         <div class="section-intro">
           <div>
             <h2>Attendance Records</h2>
-            <p>Search, review, edit and remove verified attendance entries.</p>
-          </div><button class="btn btn-light" id="exportRecords">Export CSV</button>
+            <p>
+              Search, review, edit and remove verified attendance entries.
+            </p>
+          </div>
+          <button class="btn btn-light" id="exportRecords">Export CSV</button>
         </div>
-        <div class="filter-row"><input id="recordSearch" placeholder="Search teacher..."><input type="month"
-            id="recordMonth"><select id="recordStatus">
+        <div class="filter-row">
+          <input id="recordSearch" placeholder="Search teacher..." /><input type="month" id="recordMonth" /><select
+            id="recordStatus">
             <option value="">All statuses</option>
             <option>Present</option>
             <option>Late</option>
-          </select></div>
+          </select>
+        </div>
         <div class="stats-grid compact">
-          <article class="stat-card"><span>Records</span><strong id="recordTotal">0</strong></article>
-          <article class="stat-card"><span>Late</span><strong id="recordLate">0</strong></article>
-          <article class="stat-card"><span>Missing Signature</span><strong id="recordMissing">0</strong></article>
+          <article class="stat-card">
+            <span>Records</span><strong id="recordTotal">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Late</span><strong id="recordLate">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Missing Signature</span><strong id="recordMissing">0</strong>
+          </article>
         </div>
         <div class="panel">
           <div class="table-wrap">
@@ -278,13 +358,20 @@
           <div>
             <h2>Individual Teacher Reports</h2>
             <p>Monthly attendance summary for one teacher.</p>
-          </div><button class="btn btn-primary" id="printIndividual">Print Report</button>
+          </div>
+          <button class="btn btn-primary" id="printIndividual">
+            Print Report
+          </button>
         </div>
-        <div class="filter-row"><select id="individualTeacher">
+        <div class="filter-row">
+          <select id="individualTeacher">
             <option value="">Select teacher</option>
-          </select><input type="month" id="individualMonth"></div>
+          </select><input type="month" id="individualMonth" />
+        </div>
         <div id="individualReport" class="panel report-area">
-          <p class="empty-state">Choose a teacher and month to view the report.</p>
+          <p class="empty-state">
+            Choose a teacher and month to view the report.
+          </p>
         </div>
       </section>
 
@@ -293,10 +380,14 @@
           <div>
             <h2>Whole-School Reports</h2>
             <p>Attendance summary for all teachers.</p>
-          </div><button class="btn btn-primary" id="printSchool">Print Report</button>
+          </div>
+          <button class="btn btn-primary" id="printSchool">
+            Print Report
+          </button>
         </div>
-        <div class="filter-row"><input type="month" id="schoolReportMonth"><input id="schoolReportSearch"
-            placeholder="Search teacher..."></div>
+        <div class="filter-row">
+          <input type="month" id="schoolReportMonth" /><input id="schoolReportSearch" placeholder="Search teacher..." />
+        </div>
         <div id="schoolReport" class="panel report-area"></div>
       </section>
 
@@ -312,15 +403,19 @@
             <label>Teacher<select id="absenceTeacher" required>
                 <option value="">Select teacher</option>
               </select></label>
-            <label>Date<input type="date" id="absenceDate" required></label>
+            <label>Date<input type="date" id="absenceDate" required /></label>
             <label>Status<select id="absenceStatus">
                 <option>Absent</option>
                 <option>Permission</option>
                 <option>Sick Leave</option>
                 <option>Official Duty</option>
               </select></label>
-            <label>Reason<input id="absenceReason" placeholder="Optional reason"></label>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Status</button></div>
+            <label>Reason<input id="absenceReason" placeholder="Optional reason" /></label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">
+                Save Status
+              </button>
+            </div>
           </form>
         </div>
         <div class="panel">
@@ -350,10 +445,14 @@
         <div class="section-intro">
           <div>
             <h2>Attendance Calculator</h2>
-            <p>Calculate attendance using academic-year working days and calendar exceptions.</p>
+            <p>
+              Calculate attendance using academic-year working days and
+              calendar exceptions.
+            </p>
           </div>
         </div>
-        <div class="filter-row"><select id="calcYear">
+        <div class="filter-row">
+          <select id="calcYear">
             <option value="">Select academic year</option>
           </select><select id="calcTerm">
             <option value="">Entire academic year</option>
@@ -362,13 +461,16 @@
             <option>Third Term</option>
           </select><select id="calcTeacher">
             <option value="">All active teachers</option>
-          </select></div>
+          </select>
+        </div>
         <div id="calculatorSummary" class="stats-grid"></div>
         <div class="panel">
           <div class="panel-heading">
             <div>
               <h3>Teacher Attendance Calculation</h3>
-              <p>Unrecorded days are not automatically counted as absences.</p>
+              <p>
+                Unrecorded days are not automatically counted as absences.
+              </p>
             </div>
           </div>
           <div class="table-wrap">
@@ -391,74 +493,98 @@
             </table>
           </div>
         </div>
-        <div class="notice">Physical attendance percentage = (Present + Late) ÷ Expected Working Days × 100. Holidays,
-          vacations and midterm breaks are excluded. Special Working Days are included.</div>
+        <div class="notice">
+          Physical attendance percentage = (Present + Late) ÷ Expected Working
+          Days × 100. Holidays, vacations and midterm breaks are excluded.
+          Special Working Days are included.
+        </div>
       </section>
 
       <section class="view" id="view-calendar">
         <div class="section-intro">
           <div>
             <h2>School Calendar & Academic Years</h2>
-            <p>Manage academic years, terms, midterm breaks, holidays and special working days.</p>
+            <p>
+              Manage academic years, terms, midterm breaks, holidays and
+              special working days.
+            </p>
           </div>
         </div>
         <div class="panel">
           <div class="panel-heading">
             <div>
               <h3>Create or Update Academic Year</h3>
-              <p>Enter confirmed dates. Unconfirmed dates can remain blank.</p>
+              <p>
+                Enter confirmed dates. Unconfirmed dates can remain blank.
+              </p>
             </div>
           </div>
           <form id="yearForm" class="form-grid">
-            <input type="hidden" id="yearOriginalId">
-            <label>Academic year name<input id="yearName" placeholder="2026/2027" required></label>
-            <label>Academic year start<input type="date" id="yearStart"></label>
-            <label>Academic year end<input type="date" id="yearEnd"></label>
-            <label class="check-label"><input type="checkbox" id="yearActive" checked> Set as active academic
-              year</label>
+            <input type="hidden" id="yearOriginalId" />
+            <label>Academic year name<input id="yearName" placeholder="2026/2027" required /></label>
+            <label>Academic year start<input type="date" id="yearStart" /></label>
+            <label>Academic year end<input type="date" id="yearEnd" /></label>
+            <label class="check-label"><input type="checkbox" id="yearActive" checked /> Set as active
+              academic year</label>
             <div class="term-card full-width">
               <h4>First Term</h4>
-              <div class="form-grid"><label>Opening date<input type="date" id="t1Start"></label><label>Closing
-                  date<input type="date" id="t1End"></label><label>Midterm starts<input type="date"
-                    id="t1MidStart"></label><label>Midterm ends<input type="date" id="t1MidEnd"></label><label>Reopening
-                  after midterm<input type="date" id="t1Reopen"></label></div>
+              <div class="form-grid">
+                <label>Opening date<input type="date" id="t1Start" /></label><label>Closing date<input type="date"
+                    id="t1End" /></label><label>Midterm starts<input type="date"
+                    id="t1MidStart" /></label><label>Midterm ends<input type="date"
+                    id="t1MidEnd" /></label><label>Reopening after midterm<input type="date" id="t1Reopen" /></label>
+              </div>
             </div>
             <div class="term-card full-width">
               <h4>Second Term</h4>
-              <div class="form-grid"><label>Opening date<input type="date" id="t2Start"></label><label>Closing
-                  date<input type="date" id="t2End"></label><label>Midterm starts<input type="date"
-                    id="t2MidStart"></label><label>Midterm ends<input type="date" id="t2MidEnd"></label><label>Reopening
-                  after midterm<input type="date" id="t2Reopen"></label></div>
+              <div class="form-grid">
+                <label>Opening date<input type="date" id="t2Start" /></label><label>Closing date<input type="date"
+                    id="t2End" /></label><label>Midterm starts<input type="date"
+                    id="t2MidStart" /></label><label>Midterm ends<input type="date"
+                    id="t2MidEnd" /></label><label>Reopening after midterm<input type="date" id="t2Reopen" /></label>
+              </div>
             </div>
             <div class="term-card full-width">
               <h4>Third Term</h4>
-              <div class="form-grid"><label>Opening date<input type="date" id="t3Start"></label><label>Closing
-                  date<input type="date" id="t3End"></label><label>Midterm starts<input type="date"
-                    id="t3MidStart"></label><label>Midterm ends<input type="date" id="t3MidEnd"></label><label>Reopening
-                  after midterm<input type="date" id="t3Reopen"></label></div>
+              <div class="form-grid">
+                <label>Opening date<input type="date" id="t3Start" /></label><label>Closing date<input type="date"
+                    id="t3End" /></label><label>Midterm starts<input type="date"
+                    id="t3MidStart" /></label><label>Midterm ends<input type="date"
+                    id="t3MidEnd" /></label><label>Reopening after midterm<input type="date" id="t3Reopen" /></label>
+              </div>
             </div>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Academic Year</button><button
-                class="btn btn-light" type="reset">Clear Form</button></div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">
+                Save Academic Year</button><button class="btn btn-light" type="reset">Clear Form</button>
+            </div>
           </form>
         </div>
         <div class="panel">
           <div class="panel-heading">
             <div>
               <h3>Calendar Entry</h3>
-              <p>Add holidays, vacations, school closures or special working days.</p>
+              <p>
+                Add holidays, vacations, school closures or special working
+                days.
+              </p>
             </div>
           </div>
-          <form id="eventForm" class="form-grid"><label>Date<input type="date" id="eventDate"
-                required></label><label>Academic year<select id="eventYear" required></select></label><label>Event
-              type<select id="eventType">
+          <form id="eventForm" class="form-grid">
+            <label>Date<input type="date" id="eventDate" required /></label><label>Academic year<select id="eventYear"
+                required></select></label><label>Event type<select id="eventType">
                 <option>Holiday</option>
                 <option>Vacation</option>
                 <option>School Closed</option>
                 <option>Special Working Day</option>
               </select></label><label>Title<input id="eventTitle" required
-                placeholder="e.g. Founders' Day"></label><label class="full-width">Reason / Notes<textarea
-                id="eventReason" rows="2"></textarea></label>
-            <div class="form-actions"><button class="btn btn-primary" type="submit">Save Calendar Entry</button></div>
+                placeholder="e.g. Founders' Day" /></label><label class="full-width">Reason / Notes<textarea
+                id="eventReason" rows="2"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">
+                Save Calendar Entry
+              </button>
+            </div>
           </form>
         </div>
         <div class="panel">
@@ -473,7 +599,8 @@
           <div class="panel-heading">
             <div>
               <h3>Calendar Entries</h3>
-            </div><select id="calendarYearFilter"></select>
+            </div>
+            <select id="calendarYearFilter"></select>
           </div>
           <div class="table-wrap">
             <table>
@@ -501,24 +628,39 @@
         </div>
         <div class="panel">
           <h3>Data Backup</h3>
-          <p>Export a JSON backup of teachers, attendance, absences, scans, academic years and calendar entries.</p>
-          <button class="btn btn-primary" id="backupBtn">Download Full Backup</button> <label
-            class="btn btn-light file-button">Restore Backup<input type="file" id="restoreFile"
-              accept="application/json" hidden></label>
+          <p>
+            Export a JSON backup of teachers, attendance, absences, scans,
+            academic years and calendar entries.
+          </p>
+          <button class="btn btn-primary" id="backupBtn">
+            Download Full Backup
+          </button>
+          <label class="btn btn-light file-button">Restore Backup<input type="file" id="restoreFile"
+              accept="application/json" hidden /></label>
         </div>
         <div class="panel">
           <h3>School Settings</h3>
-          <div class="form-grid"><label>School name<input id="settingSchool"
-                value="Selula Royal School of Excellence"></label><label>Late threshold<input type="time"
-                id="settingLate" value="07:20"></label>
-            <div class="form-actions"><button class="btn btn-primary" id="saveSettings">Save Settings</button></div>
+          <div class="form-grid">
+            <label>School name<input id="settingSchool" value="Selula Royal School of Excellence" /></label><label>Late
+              threshold<input type="time" id="settingLate" value="07:20" /></label>
+            <div class="form-actions">
+              <button class="btn btn-primary" id="saveSettings">
+                Save Settings
+              </button>
+            </div>
           </div>
         </div>
-        <div class="notice warning"><strong>Prototype limitation:</strong> This version stores data in the current
-          browser on this device. It does not provide cloud synchronisation, user accounts, role permissions or
-          encrypted server backups. Do not treat it as a secure multi-user production system yet.</div>
+        <div class="notice warning">
+          <strong>Prototype limitation:</strong> This version stores data in
+          the current browser on this device. It does not provide cloud
+          synchronisation, user accounts, role permissions or encrypted server
+          backups. Do not treat it as a secure multi-user production system
+          yet.
+        </div>
       </section>
-      <footer class="app-footer">S-ROSE Smart Attendance Scanner · The Lord is Our Shepherd</footer>
+      <footer class="app-footer">
+        S-ROSE Smart Attendance Scanner · The Lord is Our Shepherd
+      </footer>
     </main>
   </div>
   <div id="toast" class="toast" role="status"></div>
