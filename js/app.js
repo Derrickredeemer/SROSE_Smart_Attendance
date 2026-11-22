@@ -1006,3 +1006,35 @@
   }
   refreshAll();
 })();
+
+
+
+
+// MOBILE NAVIGATION TOGGLE
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (!menuToggle || !sidebar) return;
+
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            sidebar.classList.contains("open")
+        );
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            window.innerWidth <= 800 &&
+            sidebar.classList.contains("open") &&
+            !sidebar.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+            sidebar.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+});
